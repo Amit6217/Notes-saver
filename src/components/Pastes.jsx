@@ -81,7 +81,7 @@ const Pastes = () => {
                 <div className='flex-1'>
                   <h3 className='text-lg font-semibold text-gray-900 mb-2 dark:text-gray-100'>{paste.title}</h3>
                   <p className='text-gray-600 text-sm mb-3 line-clamp-3 dark:text-gray-300'>
-                    {paste.content.length > 150 ? paste.content.substring(0, 150) + '...' : paste.content}
+                    {paste.content.length > 500 ? paste.content.substring(0, 500) + '...' : paste.content}
                   </p>
                   <p className='text-xs text-gray-500 dark:text-gray-400'>
                     Created: {formatDate(paste.createdAt)}

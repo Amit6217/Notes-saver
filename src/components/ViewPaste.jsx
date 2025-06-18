@@ -27,7 +27,7 @@ const ViewPaste = () => {
   };
 
   return (
-    <div className='card max-w-4xl mx-auto'>
+    <div className='card  mx-auto'>
       <div className='mb-6'>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-2xl font-bold text-gray-900 dark:text-gray-100'>View Paste</h2>
