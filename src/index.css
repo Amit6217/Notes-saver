@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* Minimal custom CSS - mostly using Tailwind classes */
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary: #8b5cf6;
+}
+
+/* Base styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Simple glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Dark mode glass effect */
+.dark .glass {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient background */
+.bg-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* Label styles */
+label {
+  @apply block text-sm font-medium text-gray-700 mb-2 dark:text-gray-200;
+}
+
+/* Simple button styles */
+.btn {
+  @apply inline-flex items-center justify-center gap-2 font-medium border-none rounded-lg px-4 py-2 text-sm cursor-pointer transition-all duration-200;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  @apply text-white shadow-md hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700 border border-gray-200 hover:bg-gray-200 hover:text-gray-800 dark:bg-gray-700 dark:text-gray-200 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-gray-100;
+}
+
+.btn-sm {
+  @apply px-3 py-2.5 text-xs;
+}
+
+/* Simple input styles */
+.input {
+  @apply w-full border-2 border-gray-200 rounded-lg px-3 py-2 text-sm transition-all duration-200 bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-50 dark:border-gray-600;
+}
+
+.input:focus {
+  @apply outline-none border-indigo-500 shadow-sm;
+}
+
+.input::placeholder {
+  @apply text-gray-400;
+}
+
+.input:disabled {
+  @apply bg-gray-50 text-gray-500 cursor-not-allowed dark:bg-gray-950 dark:text-gray-100;
+}
+
+/* Simple textarea styles */
+.textarea {
+  @apply w-full border-2 border-gray-200 rounded-lg px-3 py-2 text-sm transition-all duration-200 bg-white text-gray-800 resize-y min-h-[120px] dark:bg-gray-950 dark:text-gray-50 dark:border-gray-600;
+}
+
+.textarea:focus {
+  @apply outline-none border-indigo-500 shadow-sm;
+}
+
+.textarea::placeholder {
+  @apply text-gray-400;
+}
+
+.textarea:disabled {
+  @apply bg-gray-50 text-gray-500 cursor-not-allowed dark:bg-gray-950 dark:text-gray-100;
+}
+
+/* Simple card styles */
+.card {
+  @apply bg-white rounded-xl shadow-md p-6 border border-gray-100 dark:bg-gray-900 dark:border-gray-700;
+}
+
+/* Simple badge styles */
+.badge {
+  @apply inline-flex items-center px-3 py-1.5 text-xs font-medium rounded-md transition-colors duration-200 cursor-pointer border-none;
+}
+
+.badge-blue {
+  @apply bg-blue-50 text-blue-700 hover:bg-blue-100 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800;
+}
+
+.badge-green {
+  @apply bg-green-50 text-green-700 hover:bg-green-100 dark:bg-green-900 dark:text-green-200 dark:hover:bg-green-800;
+}
+
+.badge-purple {
+  @apply bg-purple-50 text-purple-700 hover:bg-purple-100 dark:bg-purple-900 dark:text-purple-200 dark:hover:bg-purple-800;
+}
+
+.badge-red {
+  @apply bg-red-50 text-red-700 hover:bg-red-100 dark:bg-red-900 dark:text-red-200 dark:hover:bg-red-800;
+}
