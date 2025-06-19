@@ -5,7 +5,6 @@ import App from './App.jsx'
 import store from './store.js'
 import { Provider } from 'react-redux'
 import { Toaster } from 'react-hot-toast';
-import { Analytics } from "@vercel/analytics/react"
 
 
 createRoot(document.getElementById('root')).render(
