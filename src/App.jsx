@@ -3,6 +3,7 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Pastes from './components/Pastes'
 import ViewPaste from './components/ViewPaste'
+import { Analytics } from "@vercel/analytics/react"
 
 const router = createBrowserRouter(
   [
